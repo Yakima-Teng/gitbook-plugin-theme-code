@@ -27,6 +27,17 @@
 {% endblock %}
 
 {% block body %}
+
+<header class="theme-code-header">
+    {% if config.siteLogo %}
+    <a href="{{ config.siteUrl }}" target="_blank" class="logo">
+        <img src="{{ config.siteLogo }}" />
+    </a>
+    {% end if %}
+    <h1 class="title">{{config.title}}</h1>
+</header>
+
+
 <div class="book">
     <div class="book-summary">
         {% block book_sidebar %}
@@ -81,4 +92,9 @@
         });
     </script>
 </div>
+
+<div class="theme-code-bottom">
+    <small>{{config.copyright}}</small>
+</div>
+
 {% endblock %}
