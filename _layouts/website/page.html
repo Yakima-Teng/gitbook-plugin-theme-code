@@ -29,12 +29,12 @@
 {% block body %}
 
 <header class="theme-code-header">
-    {% if config.siteLogo %}
     <a href="{{ config.siteUrl }}" target="_blank" class="logo">
-        <img src="{{ config.siteLogo }}" />
+        {% if config.siteLogo %}
+        <img src="{{ config.siteLogo }}" class="img-logo" />
+        {% endif %}
+        <h1 class="title">{{config.title}}</h1>
     </a>
-    {% end if %}
-    <h1 class="title">{{config.title}}</h1>
 </header>
 
 

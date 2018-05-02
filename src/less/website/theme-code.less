@@ -1,27 +1,40 @@
 .theme-code-header {
-  padding: 5px 0;
+  padding: 15px 5px;
+  border-top: 1px solid @header-border;
+  border-bottom: 1px solid @header-border;
+  text-align: center;
   .logo {
     display: inline-block;
     vertical-align: middle;
-    img {
-      display: block;
+    color: #000;
+    cursor: pointer;
+    &:hover {
+      color: lighten(#000, 10%);
+    }
+    .img-logo {
+      display: inline-block;
+      vertical-align: middle;
       width: auto;
       height: auto;
       max-height: 100px;
       max-width: 200px;
     }
-  }
-  .title {
-    font-size: 2em;
-    font-weight: bold;
-    display: inline-block;
-    vertical-align: middle;
-    white-space: nowrap;
-    margin: 0;
+    .title {
+      font-size: 2em;
+      font-weight: bold;
+      display: inline-block;
+      vertical-align: middle;
+      white-space: nowrap;
+      margin: 0;
+    }
   }
 }
 
 .theme-code-bottom {
   text-align: center;
-  line-height: 2;
+  padding: 20px 5px;
+  small {
+    font-size: 100%;
+    line-height: 1.8;
+  }
 }
