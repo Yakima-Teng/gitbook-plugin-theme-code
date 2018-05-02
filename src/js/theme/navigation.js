@@ -384,7 +384,7 @@ function preparePage(resetScroll) {
         }
 
         var resolvedRef = url.resolve(window.location.pathname, href);
-        return window.location.pathname == resolvedRef;
+        return decodeURIComponent(window.location.pathname) == decodeURIComponent(resolvedRef);
     });
 
     // Bind scrolling if summary contains more than one link to this page
