@@ -2,7 +2,7 @@
   "name": "gitbook-plugin-theme-code",
   "description": "A GitBook theme for websites focusing on code",
   "main": "./index.js",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "engines": {
     "gitbook": ">=3.0.0"
   },
