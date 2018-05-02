@@ -5,7 +5,8 @@ var storage = require('./storage');
 var page = require('./page');
 
 var isPageReady = false;
-var onLoad = window.gitbook || [];
+// var onLoad = window.gitbook || [];
+var onLoad = [];
 
 // Export APIs for plugins
 var gitbook = {
