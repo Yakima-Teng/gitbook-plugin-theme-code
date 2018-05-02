@@ -1,44 +1,17 @@
 .theme-code-header {
   padding: 15px 5px;
-  border-top: 1px solid @header-border;
   border-bottom: 1px solid @header-border;
-  background: @header-background;
-  text-align: center;
-  .logo {
+  text-align: left;
+  .link {
     display: inline-block;
     vertical-align: middle;
-    color: #000;
-    cursor: pointer;
-    &:hover {
-      color: lighten(#000, 10%);
-    }
-    .img-logo {
-      display: inline-block;
-      vertical-align: middle;
-      width: auto;
-      height: auto;
-      max-height: 100px;
-      max-width: 200px;
-    }
-    .title {
-      font-size: 2em;
-      font-weight: bold;
-      display: inline-block;
-      vertical-align: middle;
-      white-space: nowrap;
-      margin: 0;
-    }
   }
-}
-
-.theme-code-footer {
-  text-align: center;
-  padding: 20px 5px;
-  border-top: 1px solid @footer-border;
-  border-bottom: 1px solid @footer-border;
-  background: @footer-background;
-  small {
-    font-size: 100%;
-    line-height: 1.8;
+  .title {
+    font-size: 2em;
+    font-weight: bold;
+    display: block;
+    vertical-align: middle;
+    white-space: nowrap;
+    padding: 10px 15px 10px 30px;
   }
 }

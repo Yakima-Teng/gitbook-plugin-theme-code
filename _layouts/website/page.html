@@ -28,19 +28,15 @@
 
 {% block body %}
 
-<header class="theme-code-header">
-    <a href="{{ config.siteUrl }}" target="_blank" class="logo">
-        {% if config.siteLogo %}
-        <img src="{{ config.siteLogo }}" class="img-logo" />
-        {% endif %}
-        <h1 class="title">{{config.title}}</h1>
-    </a>
-</header>
-
 
 <div class="book">
     <div class="book-summary">
         {% block book_sidebar %}
+            <header class="theme-code-header">
+                <a href="./" target="_blank" class="link">
+                    <h1 class="title">{{config.title}}</h1>
+                </a>
+            </header>
             {% block search_input %}{% endblock %}
             {% block book_summary %}
                 <nav role="navigation">
@@ -91,10 +87,6 @@
             gitbook.page.hasChanged({{ template.getJSContext()|dump|safe }});
         });
     </script>
-</div>
-
-<div class="theme-code-footer">
-    <small>{{config.copyright}}</small>
 </div>
 
 {% endblock %}
