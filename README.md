@@ -18,12 +18,12 @@ Example configuration (book.json):
     "theme-code",
     "splitter",
     "prism",
-    "expandable-chapters",
+    "folding-chapters",
     "-sharing"
   ],
   "pluginsConfig": {
     "theme-default": {
-      "showLevel": false
+      "showLevel": true
     }
   }
 }
@@ -48,7 +48,7 @@ It's not convenient to test your GitBook theme plugin by publishing your theme t
 
 ### Tip 2: build on base of default official theme for GitBook
 
-Actually, this project is also built on base of the [GitBook Default Theme](https://github.com/GitbookIO/theme-default). However, if you want to use the default theme, you should remember to fix one bug showed bellow (At first I would like to send a pull request to the author of that project, but when I open its github page, I found many PR unhandled, so I planned not to waste my time -_-):
+Actually, this project is also built on base of the [GitBook Default Theme](https://github.com/GitbookIO/theme-default). However, if you want to use the default theme, you should remember to fix two bugs showed bellow (At first I would like to send a pull request to the author of that project, but when I open its github page, I found many PR unhandled, so I planned not to waste my time -_-):
 
 In the file `src/js/theme/navigation.js`, you could find code like this:
 
@@ -75,3 +75,25 @@ $chapters = $('.book-summary .summary .chapter')
 You should replace the code `window.location.pathname == resolvedRef;` to `decodeURIComponent(window.location.pathname) == decodeURIComponent(resolvedRef)`.
 
 The bug can be repeated if your url in the browser contains special characters such as Chinese, because equality judgement in the code will fail in that case: `window.location.pathname` will get the encoded characters, while `$link.attr('href')` will get the original characters.
+
+Here is another bug, in `_layouts/website/summary.html`:
+
+```html
+{% if article.path or article.url %}
+    </a>
+{% else %}
+    </span>
+{% endif %}
+```
+
+The code above should be replaced by the code below:
+
+```html
+{% if (article.path and getPageByPath(article.path)) or article.url %}
+    </a>
+{% else %}
+    </span>
+{% endif %}
+```
+
+Otherwise, you will find sometime the HTML tag `SPAN` is closed by tag `A`.
