@@ -3,7 +3,7 @@
   "description": "A GitBook theme for websites focusing on code",
   "main": "./index.js",
   "private": false,
-  "version": "0.0.14",
+  "version": "0.0.15",
   "engines": {
     "gitbook": ">=3.0.0"
   },
