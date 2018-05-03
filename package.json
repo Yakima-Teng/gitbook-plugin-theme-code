@@ -1,10 +1,14 @@
 {
   "name": "gitbook-plugin-theme-code",
-  "keywords": ["gitbook", "plugin", "theme"],
+  "keywords": [
+    "gitbook",
+    "plugin",
+    "theme"
+  ],
   "description": "A GitBook theme for websites focusing on code",
   "main": "./index.js",
   "private": false,
-  "version": "0.0.15",
+  "version": "0.0.16",
   "engines": {
     "gitbook": ">=3.0.0"
   },
