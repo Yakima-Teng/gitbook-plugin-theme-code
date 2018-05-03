@@ -1,5 +1,6 @@
 {
   "name": "gitbook-plugin-theme-code",
+  "keywords": ["gitbook", "plugin", "theme"],
   "description": "A GitBook theme for websites focusing on code",
   "main": "./index.js",
   "private": false,
