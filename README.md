@@ -2,6 +2,8 @@
 
 This is based on the default theme for GitBook since version `3.0.0`.
 
+An example snapshot: 
+
 ![Image](./preview.png)
 
 Example configuration (book.json):
