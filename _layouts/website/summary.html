@@ -12,7 +12,7 @@
                         <b>{{ article.level }}.</b>
                     {% endif %}
                     {{ article.title }}
-            {% if article.path  or article.url %}
+            {% if (article.path and getPageByPath(article.path)) or article.url %}
                 </a>
             {% else %}
                 </span>
