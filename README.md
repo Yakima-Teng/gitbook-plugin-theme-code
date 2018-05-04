@@ -1,5 +1,17 @@
 # GitBook Theme - for websites focusing on code
 
+<p align="center">
+  <a href="https://npmcharts.com/compare/gitbook-plugin-theme-code?minimal=true">
+    <img src="https://img.shields.io/npm/dm/gitbook-plugin-theme-code.svg" alt="Downloads">
+  </a>
+  <a href="https://www.npmjs.com/package/gitbook-plugin-theme-code">
+    <img src="https://img.shields.io/npm/v/gitbook-plugin-theme-code.svg" alt="Version">
+  </a>
+  <a href="https://www.npmjs.com/package/gitbook-plugin-theme-code">
+    <img src="https://img.shields.io/npm/l/gitbook-plugin-theme-code.svg" alt="License">
+  </a>
+</p>
+
 This is based on the default theme for GitBook since version `3.0.0`.
 
 An example snapshot: 
