@@ -12,9 +12,9 @@
   </a>
 </p>
 
-This is based on the default theme for GitBook since version `3.0.0`. Currently these are no big changes but some bug fixes and a site title added to the top of the sidebar.
+This is based on the default theme for GitBook since version `3.0.0`. Currently there are no big changes but some bug fixes and a site title added to the top of the sidebar.
 
-An example snapshot: 
+An example snapshot:
 
 ![Image](./preview.png)
 
