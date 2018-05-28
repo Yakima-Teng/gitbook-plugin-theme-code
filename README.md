@@ -48,16 +48,18 @@ Example configuration (book.json):
 If you want to develop GitBook theme and publish it to npm repository, you should name your package to somewhat like `gitbook-plugin-theme-themename`. For details, please refer to the [official online document](https://toolchain.gitbook.com/). Here are some tips for you.
 
 
-### Tip 1: use local npm package instead of published one
+### Tip 1: Test your plugin locally
 
-It's not convenient to test your GitBook theme plugin by publishing your theme to npm and then import it in your other project. If you want to do similar test, you can replace your theme name in `plugins` field of `book.json` with what looks like the below (`file:/Users/yakima/projects/gitbook-plugin-theme-code` refer to the location of your local GitBook theme project/module):
+In the plugin's folder, run:
 
-```json
-{
-  "plugins": [
-    "theme-code@file:/Users/yakima/projects/gitbook-plugin-theme-code"
-  ]
-}
+```bash
+npm link
+```
+
+Then in your book's folder:
+
+```bash
+npm link gitbook-plugin-plugin-name
 ```
 
 ### Tip 2: build on base of default official theme for GitBook
@@ -69,21 +71,21 @@ In the file `src/js/theme/navigation.js`, you could find code like this:
 ```javascript
 // Get current page summary chapters
 $chapters = $('.book-summary .summary .chapter')
-.filter(function() {
-    var $link = $(this).children('a'),
-        href  = null;
-
-    // Chapter doesn't have a link
-    if (!$link.length) {
-        return false;
-    }
-    else {
-        href = $link.attr('href').split('#')[0];
-    }
-
-    var resolvedRef = url.resolve(window.location.pathname, href);
-    return window.location.pathname == resolvedRef;
-});
+    .filter(function() {
+        var $link = $(this).children('a'),
+            href  = null;
+    
+        // Chapter doesn't have a link
+        if (!$link.length) {
+            return false;
+        }
+        else {
+            href = $link.attr('href').split('#')[0];
+        }
+    
+        var resolvedRef = url.resolve(window.location.pathname, href);
+        return window.location.pathname == resolvedRef;
+    });
 ```
 
 You should replace the code `window.location.pathname == resolvedRef;` to `decodeURIComponent(window.location.pathname) == decodeURIComponent(resolvedRef)`.
