@@ -28,6 +28,9 @@ Example configuration (book.json):
   "description": "site description",
   "language": "zh-hans",
   "copyright": "All Rights Reserved",
+  "variables": {
+    "homePage": "/"
+  },
   "plugins": [
     "theme-code",
     "splitter",
