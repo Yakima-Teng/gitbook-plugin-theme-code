@@ -23,5 +23,16 @@
     <body>
         {% block body %}{% endblock %}
         {% block javascript %}{% endblock %}
+        {% if config.baiduStatisticsCode %}
+        <script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?{{ config.baiduStatisticsCode }}";
+                var s = document.getElementsByTagName("script")[0];
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script>
+        {% endif %}
     </body>
 </html>

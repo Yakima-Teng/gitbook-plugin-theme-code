@@ -25,6 +25,7 @@ Example configuration (book.json):
   "title": "Site Title",
   "author": "Author Name",
   "authorHomepage": "http://www.example.com",
+  "baiduStatisticsCode": "",
   "description": "site description",
   "language": "zh-hans",
   "copyright": "All Rights Reserved",
